@@ -26,12 +26,7 @@ const Footer: React.FC = () => {
         </div>
         
         <p className="text-gray-600 dark:text-gray-400 text-sm font-medium">
-          {language === 'en' 
-            ? `Designed & Built by Danilo G. Itagyba Neto` 
-            : `Projetado e Construído por Danilo G. Itagyba Neto`}
-        </p>
-        <p className="text-gray-400 dark:text-gray-500 text-xs mt-2">
-          {new Date().getFullYear()} — React • Tailwind • TypeScript
+         {new Date().getFullYear()} © Danilo Itagyba. {language === 'en' ? 'All rights reserved.' : 'Todos os direitos reservados.'}
         </p>
       </div>
     </footer>
