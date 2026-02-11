@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import { motion } from "framer-motion";
 import { useLanguage } from "../../context/LanguageContext";
-import { DATA } from "../../constants/data";
+import { DATA, TECH_STACK } from "../../constants/data";
 import {
   Code2,
   Database,
@@ -68,7 +68,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill, index }) => (
 const Skills: React.FC = () => {
   const { language } = useLanguage();
   
-  const { techStack } = useMemo(() => DATA[language], [language]);
+  const techStack = TECH_STACK;
 
   const title = language === "en" ? "Technical Skills" : "Habilidades Técnicas";
 

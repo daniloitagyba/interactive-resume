@@ -14,17 +14,9 @@ export interface Education {
 }
 
 export interface PortfolioData {
-  name: string;
   title: string;
   shortSummary: string;
   summary: string;
-  techStack: string[];
   experience: Experience[];
   education: Education[];
-  links: {
-    linkedin: string;
-    github: string;
-    email: string;
-    blog: string;
-  };
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Rss } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
-import { DATA } from '../../constants/data';
+import { DATA, NAME, LINKS } from '../../constants/data';
 
 const Hero: React.FC = () => {
   const { language } = useLanguage();
@@ -20,9 +20,9 @@ const Hero: React.FC = () => {
             {language === 'en' ? "Hi, my name is" : "Olá, meu nome é"}
           </h2>
           <h1 className="text-5xl md:text-7xl font-extrabold mb-6 text-gray-900 dark:text-white tracking-tight flex justify-center flex-wrap">
-            {Array.from(data.name).map((char, index) => (
+            {Array.from(NAME).map((char, index) => (
               <motion.span
-                key={`${data.name}-${index}`}
+                key={`${NAME}-${index}`}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
@@ -52,16 +52,16 @@ const Hero: React.FC = () => {
           </p>
           
           <div className="flex justify-center space-x-6">
-            <a href={data.links.github} target="_blank" rel="noopener noreferrer" className="nav-link">
+            <a href={LINKS.github} target="_blank" rel="noopener noreferrer" className="nav-link">
               <Github size={28} />
             </a>
-            <a href={data.links.linkedin} target="_blank" rel="noopener noreferrer" className="nav-link">
+            <a href={LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="nav-link">
               <Linkedin size={28} />
             </a>
-            <a href={data.links.blog} target="_blank" rel="noopener noreferrer" className="nav-link" title="Blog">
+            <a href={LINKS.blog} target="_blank" rel="noopener noreferrer" className="nav-link" title="Blog">
               <Rss size={28} />
             </a>
-            <a href={`mailto:${data.links.email}`} className="nav-link">
+            <a href={`mailto:${LINKS.email}`} className="nav-link">
               <Mail size={28} />
             </a>
           </div>
