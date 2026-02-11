@@ -1,62 +1,5 @@
-export interface Experience {
-  role: string;
-  company: string;
-  location: string;
-  period: string;
-  description: string[];
-  technologies: string[];
-}
-
-export interface Education {
-  degree: string;
-  institution: string;
-  period: string;
-}
-
-export interface PortfolioData {
-  name: string;
-  title: string;
-  summary: string;
-  techStack: string[];
-  experience: Experience[];
-  education: Education[];
-  links: {
-    linkedin: string;
-    github: string;
-    email: string;
-    blog: string;
-  };
-}
-
-const calculateDuration = (startDate: Date, language: "en" | "pt") => {
-  const now = new Date();
-  let years = now.getFullYear() - startDate.getFullYear();
-  let months = now.getMonth() - startDate.getMonth();
-
-  if (months < 0) {
-    years--;
-    months += 12;
-  }
-
-  const parts = [];
-  if (years > 0) {
-    if (language === "en") {
-      parts.push(`${years} year${years > 1 ? "s" : ""}`);
-    } else {
-      parts.push(`${years} ano${years > 1 ? "s" : ""}`);
-    }
-  }
-  if (months > 0) {
-    if (language === "en") {
-      parts.push(`${months} month${months > 1 ? "s" : ""}`);
-    } else {
-      parts.push(`${months} ${months > 1 ? "meses" : "mês"}`);
-    }
-  }
-
-  const joiner = language === "en" ? " and " : " e ";
-  return parts.join(joiner);
-};
+import { PortfolioData } from '../types';
+import { calculateDuration } from '../utils/formatters';
 
 const lastJobStart = new Date(2024, 4);
 
@@ -252,7 +195,7 @@ export const DATA: Record<"en" | "pt", PortfolioData> = {
     },
   },
   pt: {
-    name: "Danilo G. Itagyba Neto",
+    name: "Danilo Itagyba",
     title: "Engenheiro de Software Sênior",
     summary:
       "Com uma trajetória de mais de 15 anos na área de TI, construí uma base sólida atuando por uma década com ERP, SQL e Business Intelligence (BI). Há 6 anos, direcionei minha carreira para a engenharia de software com foco em back-end. Tenho experiência no ciclo completo de engenharia de software, projetando, entregando e mantendo soluções robustas em diversas arquiteturas.",

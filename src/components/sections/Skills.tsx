@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import { motion } from "framer-motion";
-import { useLanguage } from "../context/LanguageContext";
-import { DATA } from "../constants/data";
+import { useLanguage } from "../../context/LanguageContext";
+import { DATA } from "../../constants/data";
 import {
   Code2,
   Database,

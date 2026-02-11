@@ -1,7 +1,7 @@
 import React from 'react';
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from '../../context/LanguageContext';
 import { Github, Linkedin, Mail, Rss } from 'lucide-react';
-import { DATA } from '../constants/data';
+import { DATA } from '../../constants/data';
 
 const Footer: React.FC = () => {
   const { language } = useLanguage();

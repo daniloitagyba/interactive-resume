@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useLanguage } from '../context/LanguageContext';
-import { DATA } from '../constants/data';
+import { useLanguage } from '../../context/LanguageContext';
+import { DATA } from '../../constants/data';
 import { GraduationCap, User } from 'lucide-react';
 
 const About: React.FC = () => {

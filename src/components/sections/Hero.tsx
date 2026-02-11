@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Rss } from 'lucide-react';
-import { useLanguage } from '../context/LanguageContext';
-import { DATA } from '../constants/data';
+import { useLanguage } from '../../context/LanguageContext';
+import { DATA } from '../../constants/data';
 
 const Hero: React.FC = () => {
   const { language } = useLanguage();
