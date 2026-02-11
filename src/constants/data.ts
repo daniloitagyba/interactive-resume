@@ -62,7 +62,7 @@ const lastJobStart = new Date(2024, 4);
 
 export const DATA: Record<'en' | 'pt', PortfolioData> = {
   en: {
-    name: "Danilo G. Itagyba Neto",
+    name: "Danilo Itagyba",
     title: "Senior Software Engineer",
     summary: "With over 15 years of experience in IT, I have built a solid foundation working for a decade with ERP, SQL, and Business Intelligence (BI). For the past 6 years, I have pivoted my career to focus on Back-end software development. I have proven experience in the full software engineering lifecycle, designing and delivering robust solutions across diverse architectures.",
     techStack: [
