@@ -14,7 +14,7 @@ const Experience: React.FC = () => {
       setTimeout(() => {
         const element = document.getElementById('experience');
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          element.scrollIntoView({ behavior: 'smooth' });
         }
       }, 100);
     }
