@@ -33,73 +33,10 @@ This guide explains how to deploy your React/Vite application on a Linux Virtual
 
 ## Step 2: Install Cloudflared
 
-On the Linux VM, install the Cloudflare Tunnel client:
+Create a Cloudflare Tunnel via the dashboard at https://one.dash.cloudflare.com/
 
-```bash
-# Add Cloudflare GPG key
-sudo mkdir -p --mode=0755 /usr/share/keyrings
-curl -fsSL https://pkg.cloudflare.com/cloudflare-main.gpg | sudo tee /usr/share/keyrings/cloudflare-main.gpg >/dev/null
+## Updating the Application on the VM
 
-# Add Cloudflare repository
-echo 'deb [signed-by=/usr/share/keyrings/cloudflare-main.gpg] https://pkg.cloudflare.com/cloudflared bullseye main' | sudo tee /etc/apt/sources.list.d/cloudflared.list
-
-# Install cloudflared
-sudo apt update && sudo apt install cloudflared
-```
-
----
-
-## Step 3: Authenticate and Create Tunnel
-
-1. **Login**:
    ```bash
-   cloudflared tunnel login
+cd portifolio && git pull && npm install && npm run build && pm2 restart portfolio
    ```
-   *Click the link provided in the terminal to authorize your account.*
-
-2. **Create the Tunnel**:
-   ```bash
-   cloudflared tunnel create portfolio-tunnel
-   ```
-   *Note the ID generated (e.g., `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`).*
-
----
-
-## Step 4: Configure the Tunnel
-
-Create a configuration file in `~/.cloudflared/config.yml`:
-
-```yaml
-tunnel: <YOUR_TUNNEL_ID>
-credentials-file: /home/<USER>/.cloudflared/<YOUR_TUNNEL_ID>.json
-
-ingress:
-  - hostname: portfolio.yourdomain.com
-    service: http://localhost:3000
-  - service: http_status:404
-```
-
----
-
-## Step 5: Route DNS and Run
-
-1. **Route the Domain**:
-   Connect your hostname to the tunnel:
-   ```bash
-   cloudflared tunnel route dns portfolio-tunnel portfolio.yourdomain.com
-   ```
-
-2. **Run the Tunnel as a Service**:
-   To ensure the tunnel starts automatically after a reboot:
-   ```bash
-   sudo cloudflared service install
-   sudo systemctl start cloudflared
-   sudo systemctl enable cloudflared
-   ```
-
----
-
-## Summary of Benefits
-- **No Open Ports**: Your VM's firewall can stay 100% closed to inbound traffic.
-- **DDoS Protection**: Traffic goes through Cloudflare's edge before reaching your VM.
-- **SSL by Default**: Cloudflare handles the HTTPS certificate automatically.
