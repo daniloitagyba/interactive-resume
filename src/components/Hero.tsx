@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
                   duration: 0.1,
-                  delay: index * 0.08,
+                  delay: index * 0.16,
                   ease: "easeOut",
                 }}
               >
