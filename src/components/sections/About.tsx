@@ -43,7 +43,7 @@ const About: React.FC = () => {
                 <div key={index} className="border-l-2 border-accent/20 pl-4">
                   <h4 className="font-bold text-gray-900 dark:text-white">{edu.degree}</h4>
                   <p className="text-accent text-sm">{edu.institution}</p>
-                  <p className="text-gray-500 dark:text-gray-400 text-sm">{edu.period}</p>
+                  <p className="text-white/80 text-[11px] font-semibold mt-1">{edu.period}</p>
                 </div>
               ))}
             </div>

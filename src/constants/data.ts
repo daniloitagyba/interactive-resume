@@ -83,7 +83,7 @@ export const DATA: Record<"en" | "pt", PortfolioData> = {
         role: "Senior Software Engineer",
         company: "Cielo",
         location: "São Paulo - SP (remote)",
-        period: "October 2021 - February 2024 (2 years and 4 months)",
+        period: "October 2021 - February 2024 (2 years, 4 months)",
         description: [
           "Cielo E-Commerce. Reconciliation solutions.",
           "Development and maintenance in .Net/.Net Core (Windows/Kubernetes VMs).",
@@ -133,7 +133,7 @@ export const DATA: Record<"en" | "pt", PortfolioData> = {
         role: "Senior Systems Analyst (Contractor)",
         company: "Unicasa",
         location: "Juiz de Fora - MG",
-        period: "August 2019 - November 2020 (1 year and 3 months)",
+        period: "August 2019 - November 2020 (1 year, 3 months)",
         description: [
           "Aluminum industry.",
           "Customization of ERP (proprietary language), development of reports/dashboards in Power BI.",
@@ -145,7 +145,7 @@ export const DATA: Record<"en" | "pt", PortfolioData> = {
         role: "Senior Systems Analyst (Contractor)",
         company: "SBA",
         location: "Juiz de Fora - MG",
-        period: "January 2016 - November 2020 (4 years and 10 months)",
+        period: "January 2016 - November 2020 (4 years, 10 months)",
         description: [
           "Aluminum industry.",
           "Customization of ERP (proprietary language), development of reports/dashboards in Power BI.",
@@ -157,7 +157,7 @@ export const DATA: Record<"en" | "pt", PortfolioData> = {
         role: "Senior Systems Analyst",
         company: "Hiperroll",
         location: "Juiz de Fora - MG",
-        period: "April 2015 - June 2017 (2 years and 2 months)",
+        period: "April 2015 - June 2017 (2 years, 2 months)",
         description: [
           "Plastic packaging industry.",
           "Customization of ERP (proprietary language), development of reports/dashboards in Power BI.",
@@ -169,7 +169,7 @@ export const DATA: Record<"en" | "pt", PortfolioData> = {
         role: "Senior Systems Analyst",
         company: "Multstock",
         location: "Belo Horizonte - MG",
-        period: "May 2011 - June 2012 (1 year and 1 month)",
+        period: "May 2011 - June 2012 (1 year, 1 month)",
         description: [
           "Industry/trade of rescue materials.",
           "Customization of ERP (proprietary language), development of reports/dashboards in Power BI.",
@@ -181,7 +181,7 @@ export const DATA: Record<"en" | "pt", PortfolioData> = {
         role: "Senior Systems Analyst",
         company: "Hiperroll",
         location: "Juiz de Fora - MG",
-        period: "March 2007 - April 2011 (4 years and 1 month)",
+        period: "March 2007 - April 2011 (4 years, 1 month)",
         description: [
           "Plastic packaging industry.",
           "Customization of ERP (proprietary language), development of reports/dashboards in Power BI.",
@@ -238,7 +238,7 @@ export const DATA: Record<"en" | "pt", PortfolioData> = {
         role: "Engenheiro de Software Sênior",
         company: "Cielo",
         location: "São Paulo - SP (remoto)",
-        period: "Outubro 2021 - Fevereiro 2024 (2 anos e 4 meses)",
+        period: "Outubro 2021 - Fevereiro 2024 (2 anos, 4 meses)",
         description: [
           "Cielo E-Commerce. Soluções de conciliação.",
           "Desenvolvimento e manutenção em .Net/.Net Core (VMs Windows/Kubernetes).",
@@ -290,7 +290,7 @@ export const DATA: Record<"en" | "pt", PortfolioData> = {
         role: "Analista de Sistemas Sênior (PJ)",
         company: "Unicasa",
         location: "Juiz de Fora - MG",
-        period: "Agosto 2019 - Novembro 2020 (1 ano e 3 meses)",
+        period: "Agosto 2019 - Novembro 2020 (1 ano, 3 meses)",
         description: [
           "Indústria de alumínio.",
           "Customização de ERP (linguagem própria), desenvolvimento de relatórios/painéis em Power BI.",
@@ -302,7 +302,7 @@ export const DATA: Record<"en" | "pt", PortfolioData> = {
         role: "Analista de Sistemas Sênior (PJ)",
         company: "SBA",
         location: "Juiz de Fora - MG",
-        period: "Janeiro 2016 - Novembro 2020 (4 anos e 10 meses)",
+        period: "Janeiro 2016 - Novembro 2020 (4 anos, 10 meses)",
         description: [
           "Indústria de alumínio.",
           "Customização de ERP (linguagem própria), desenvolvimento de relatórios/painéis em Power BI.",
@@ -314,7 +314,7 @@ export const DATA: Record<"en" | "pt", PortfolioData> = {
         role: "Analista de Sistemas Sênior",
         company: "Hiperroll",
         location: "Juiz de Fora - MG",
-        period: "Abril 2015 - Junho 2017 (2 years and 2 months)",
+        period: "Abril 2015 - Junho 2017 (2 anos, 2 meses)",
         description: [
           "Indústria de embalagens plásticas.",
           "Customização de ERP (linguagem própria), desenvolvimento de relatórios/painéis em Power BI.",
@@ -326,7 +326,7 @@ export const DATA: Record<"en" | "pt", PortfolioData> = {
         role: "Analista de Sistemas Sênior",
         company: "Multstock",
         location: "Belo Horizonte - MG",
-        period: "Maio 2011 - Junho 2012 (1 ano e 1 mês)",
+        period: "Maio 2011 - Junho 2012 (1 ano, 1 mês)",
         description: [
           "Indústria/comércio de materiais de resgate.",
           "Customização de ERP (linguagem própria), desenvolvimento de relatórios/painéis em Power BI.",
@@ -338,7 +338,7 @@ export const DATA: Record<"en" | "pt", PortfolioData> = {
         role: "Analista de Sistemas Sênior",
         company: "Hiperroll",
         location: "Juiz de Fora - MG",
-        period: "Março 2007 - Abril 2011 (4 anos e 1 mês)",
+        period: "Março 2007 - Abril 2011 (4 anos, 1 mês)",
         description: [
           "Indústria de embalagens plásticas.",
           "Customização de ERP (linguagem própria), desenvolvimento de relatórios/painéis em Power BI.",

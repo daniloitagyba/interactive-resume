@@ -24,6 +24,6 @@ export const calculateDuration = (startDate: Date, language: "en" | "pt") => {
     }
   }
 
-  const joiner = language === "en" ? " and " : " e ";
+  const joiner = ", ";
   return parts.join(joiner);
 };
