@@ -21,7 +21,7 @@ const Experience: React.FC = () => {
     setShowAll(!showAll);
   };
 
-  const displayedExperience = showAll ? data.experience : data.experience.slice(0, 3);
+  const displayedExperience = showAll ? data.experience : data.experience.slice(0, 2);
 
   return (
     <section id="experience" className="section-padding">
@@ -98,7 +98,7 @@ const Experience: React.FC = () => {
           </AnimatePresence>
         </motion.div>
 
-        {data.experience.length > 3 && (
+        {data.experience.length > 2 && (
           <motion.div layout className="mt-12 text-center">
             <button
               onClick={toggleShowAll}

@@ -66,8 +66,8 @@ export const DATA: Record<'en' | 'pt', PortfolioData> = {
     title: "Senior Software Engineer",
     summary: "With over 15 years of experience in IT, I have built a solid foundation working for a decade with ERP, SQL, and Business Intelligence (BI). For the past 6 years, I have pivoted my career to focus on Back-end software development. I have proven experience in the full software engineering lifecycle, designing and delivering robust solutions across diverse architectures.",
     techStack: [
-      "C#", ".Net Framework", ".Net Core", "T-SQL", "PL/SQL", "Node", "React", "Javascript", "Typescript",
-      "Clean Architecture", "DDD", "Design Patterns", "SOLID", "Microservices", "Rest APIs", "Soap", "Wpf", "SPAs",
+      "C#", ".Net", "T-SQL", "PL/SQL", "Node", "React", "Javascript", "Typescript",
+      "Clean Architecture", "DDD", "Design Patterns", "SOLID", "Microservices", "Rest APIs",
       "CI/CD", "Azure", "AWS", "Docker", "Kubernetes", "SQL Server", "Oracle", "MySql", "PostgreSQL", "Redis",
       "RabbitMQ", "Service Bus", "Unit Tests", "Integration Tests"
     ],
