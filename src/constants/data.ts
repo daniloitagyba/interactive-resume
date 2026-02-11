@@ -7,8 +7,9 @@ export const DATA: Record<"en" | "pt", PortfolioData> = {
   en: {
     name: "Danilo Itagyba",
     title: "Senior Software Engineer",
+    shortSummary: "I am a full-stack developer with over a decade of experience.",
     summary:
-      "With over 15 years of experience in IT, I have built a solid foundation working for a decade with ERP, SQL, and Business Intelligence (BI). For the past 6 years, I have pivoted my career to focus on Back-end software development. I have proven experience in the full software engineering lifecycle, designing and delivering robust solutions across diverse architectures.",
+      "With over 15 years of experience in IT, I have built a solid foundation working for a decade with ERP, SQL, and Business Intelligence (BI). For the past 6 years, I have pivoted my career to focus on back-end software development. I have proven experience in the full software engineering lifecycle, designing and delivering robust solutions across diverse architectures.",
     techStack: [
       "C#",
       ".Net",
@@ -197,6 +198,7 @@ export const DATA: Record<"en" | "pt", PortfolioData> = {
   pt: {
     name: "Danilo Itagyba",
     title: "Engenheiro de Software Sênior",
+    shortSummary: "Sou desenvolvedor full-stack com mais de uma década de experiencia.",
     summary:
       "Com uma trajetória de mais de 15 anos na área de TI, construí uma base sólida atuando por uma década com ERP, SQL e Business Intelligence (BI). Há 6 anos, direcionei minha carreira para a engenharia de software com foco em back-end. Tenho experiência no ciclo completo de engenharia de software, projetando, entregando e mantendo soluções robustas em diversas arquiteturas.",
     techStack: [

@@ -16,6 +16,7 @@ export interface Education {
 export interface PortfolioData {
   name: string;
   title: string;
+  shortSummary: string;
   summary: string;
   techStack: string[];
   experience: Experience[];
