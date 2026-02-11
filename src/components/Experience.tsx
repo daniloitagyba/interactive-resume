@@ -56,9 +56,13 @@ const Experience: React.FC = () => {
                     opacity: { duration: 0.2 }
                   }
                 }}
-                className="relative pl-8 border-l-2 border-accent/30 hover:border-accent transition-colors overflow-hidden"
+                className="relative pl-10 overflow-hidden group"
               >
-                <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-accent" />
+                {/* Vertical Line */}
+                <div className="absolute left-[19px] top-0 bottom-0 w-0.5 bg-accent/30 group-hover:bg-accent transition-colors" />
+                
+                {/* Timeline Circle */}
+                <div className="absolute left-[12px] top-0 w-4 h-4 rounded-full bg-accent z-10 scale-100 group-hover:scale-110 transition-transform" />
                 
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                   <div>
