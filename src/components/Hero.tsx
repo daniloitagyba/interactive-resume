@@ -19,8 +19,30 @@ const Hero: React.FC = () => {
           <h2 className="text-accent text-xl md:text-2xl font-bold mb-4">
             {language === 'en' ? "Hi, my name is" : "Olá, meu nome é"}
           </h2>
-          <h1 className="text-5xl md:text-7xl font-extrabold mb-6 text-gray-900 dark:text-white tracking-tight">
-            {data.name}
+          <h1 className="text-5xl md:text-7xl font-extrabold mb-6 text-gray-900 dark:text-white tracking-tight flex justify-center flex-wrap">
+            {Array.from(data.name).map((char, index) => (
+              <motion.span
+                key={`${data.name}-${index}`}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.1,
+                  delay: index * 0.08,
+                  ease: "easeOut",
+                }}
+              >
+                {char === " " ? "\u00A0" : char}
+              </motion.span>
+            ))}
+            <motion.span
+              animate={{ opacity: [0, 1, 0] }}
+              transition={{
+                duration: 0.8,
+                repeat: Infinity,
+                ease: "linear",
+              }}
+              className="inline-block w-[3px] md:w-[5px] h-[0.8em] bg-accent ml-1 self-center"
+            />
           </h1>
           <h3 className="text-3xl md:text-5xl font-bold text-gray-600 dark:text-gray-400 mb-8">
             {data.title}
