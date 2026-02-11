@@ -30,5 +30,5 @@
 }
 
 .section-padding {
-  @apply py-20 px-4 md:px-8 scroll-mt-24;
+  @apply py-20 px-4 md:px-8 scroll-mt-12;
 }
