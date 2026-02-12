@@ -2,6 +2,8 @@
 
 A modern, high-performance, responsive, and bilingual professional portfolio.
 
+🌐 Preview: https://itagyba.work/
+
 ## 🚀 Technologies
 - **React 18** (Functional components, Hooks, Suspense)
 - **Vite** (Next-generation frontend tooling)
