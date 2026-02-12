@@ -1,4 +1,4 @@
-# Professional Portfolio - Danilo G. Itagyba Neto
+# Interactive Resume - Danilo G. Itagyba Neto
 
 A modern, responsive, and bilingual professional portfolio.
 
