@@ -15,6 +15,7 @@ export const FlagUS: React.FC<{ className?: string }> = ({ className }) => (
         <circle cx="65" cy="205" r="22" /><circle cx="135" cy="205" r="22" /><circle cx="205" cy="205" r="22" />
       </g>
     </g>
+    <circle cx="256" cy="256" r="254" fill="none" stroke="currentColor" strokeOpacity="0.1" strokeWidth="4" />
   </svg>
 );
 
@@ -29,5 +30,6 @@ export const FlagBR: React.FC<{ className?: string }> = ({ className }) => (
       <circle cx="256" cy="256" r="110" fill="#002776" />
       <path d="M160 265c40-15 110-15 192 0" fill="none" stroke="white" strokeWidth="18" strokeLinecap="round" />
     </g>
+    <circle cx="256" cy="256" r="254" fill="none" stroke="currentColor" strokeOpacity="0.1" strokeWidth="4" />
   </svg>
 );

@@ -12,23 +12,27 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ exp, index }) => {
   return (
     <motion.div
       layout
-      initial={{ opacity: 0, height: 0, marginBottom: 0 }}
+      initial={{ opacity: 0, x: 20, height: 0, marginBottom: 0 }}
       animate={{ 
         opacity: 1, 
+        x: 0,
         height: "auto", 
         marginBottom: "3rem",
         transition: { 
           height: { duration: 0.4 },
-          opacity: { duration: 0.3, delay: 0.1 }
+          opacity: { duration: 0.3, delay: 0.1 },
+          x: { duration: 0.4, delay: 0.1 }
         }
       }}
       exit={{ 
         opacity: 0, 
+        x: 20,
         height: 0, 
         marginBottom: 0,
         transition: {
           height: { duration: 0.4, delay: 0.1 },
-          opacity: { duration: 0.2 }
+          opacity: { duration: 0.2 },
+          x: { duration: 0.2 }
         }
       }}
       className="relative pl-10 overflow-hidden group"
@@ -41,7 +45,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ exp, index }) => {
       
       <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
         <div>
-          <h3 className="text-xl font-bold text-theme-text">{exp.role}</h3>
+          <h3 className="text-xl font-bold text-theme-text group-hover:text-accent transition-colors">{exp.role}</h3>
           <p className="font-medium">
             <span className="text-accent">{exp.company}</span>
             <span className="text-theme-text-muted text-sm ml-2">— {exp.location}</span>

@@ -67,8 +67,8 @@ const Navbar: React.FC = () => {
                 className={cn(
                   "p-2 rounded-md transition-all flex items-center gap-2 border",
                   language === 'en' 
-                    ? "bg-accent/20 border-accent text-accent dark:text-white shadow-[0_0_10px_rgba(56,189,248,0.3)]" 
-                    : "border-gray-300 dark:border-gray-700 text-gray-400 hover:border-gray-500 hover:text-gray-200"
+                    ? "bg-accent/20 border-accent text-accent shadow-[0_0_10px_rgba(56,189,248,0.2)]" 
+                    : "border-theme-border text-theme-text-muted hover:border-accent/30 hover:text-accent"
                 )}
                 title="English"
               >
@@ -81,8 +81,8 @@ const Navbar: React.FC = () => {
                 className={cn(
                   "p-2 rounded-md transition-all flex items-center gap-2 border",
                   language === 'pt' 
-                    ? "bg-accent/20 border-accent text-accent dark:text-white shadow-[0_0_10px_rgba(56,189,248,0.3)]" 
-                    : "border-gray-300 dark:border-gray-700 text-gray-400 hover:border-gray-500 hover:text-gray-200"
+                    ? "bg-accent/20 border-accent text-accent shadow-[0_0_10px_rgba(56,189,248,0.2)]" 
+                    : "border-theme-border text-theme-text-muted hover:border-accent/30 hover:text-accent"
                 )}
                 title="Português"
               >
