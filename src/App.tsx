@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import Navbar from './components/layout/Navbar';
-import Hero from './components/sections/Hero';
-import Education from './components/sections/Education';
-import Experience from './components/sections/Experience';
-import Skills from './components/sections/Skills';
 import Footer from './components/layout/Footer';
 import { ThemeProvider } from './context/ThemeContext';
 import { LanguageProvider } from './context/LanguageContext';
+
+const Hero = lazy(() => import('./components/sections/Hero'));
+const Education = lazy(() => import('./components/sections/Education'));
+const Experience = lazy(() => import('./components/sections/Experience'));
+const Skills = lazy(() => import('./components/sections/Skills'));
+
+const LoadingFallback = () => (
+  <div className="min-h-screen flex items-center justify-center bg-theme-bg text-accent">
+    <div className="animate-pulse text-xl font-bold">Loading...</div>
+  </div>
+);
 
 const App: React.FC = () => {
   return (
@@ -15,10 +22,12 @@ const App: React.FC = () => {
         <div className="min-h-screen transition-colors duration-300">
           <Navbar />
           <main>
-            <Hero />
-            <Education />
-            <Experience />
-            <Skills />
+            <Suspense fallback={<LoadingFallback />}>
+              <Hero />
+              <Education />
+              <Experience />
+              <Skills />
+            </Suspense>
           </main>
           <Footer />
         </div>

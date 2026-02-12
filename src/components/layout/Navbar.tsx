@@ -35,6 +35,7 @@ const Navbar: React.FC = () => {
             onClick={() => scrollTo('home')} 
             className="flex-shrink-0 text-accent hover:scale-110 transition-transform cursor-pointer"
             title="Home"
+            aria-label={t.nav.home}
           >
             <Terminal size={36} strokeWidth={2.5} />
           </button>
@@ -46,7 +47,7 @@ const Navbar: React.FC = () => {
                 onClick={() => scrollTo(item.id)}
                 className="text-base font-bold text-theme-text hover:text-accent transition-colors cursor-pointer flex items-center gap-2"
               >
-                <item.icon size={20} />
+                <item.icon size={20} aria-hidden="true" />
                 {item.label}
               </button>
             ))}
@@ -57,8 +58,9 @@ const Navbar: React.FC = () => {
               onClick={toggleTheme}
               className="p-2 rounded-md border border-theme-border text-theme-text-muted hover:text-accent transition-all"
               title={theme === 'light' ? 'Dark Mode' : 'Light Mode'}
+              aria-label={theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
             >
-              {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
+              {theme === 'light' ? <Moon size={20} aria-hidden="true" /> : <Sun size={20} aria-hidden="true" />}
             </button>
 
             <div className="flex items-center space-x-2">
@@ -71,8 +73,10 @@ const Navbar: React.FC = () => {
                     : "border-theme-border text-theme-text-muted hover:border-accent/30 hover:text-accent"
                 )}
                 title="English"
+                aria-label="Switch to English"
+                aria-current={language === 'en' ? 'true' : undefined}
               >
-                <FlagUS className="w-5 h-5" />
+                <FlagUS className="w-5 h-5" aria-hidden="true" />
                 <span className="text-xs font-bold uppercase hidden sm:inline">EN</span>
               </button>
               
@@ -85,8 +89,10 @@ const Navbar: React.FC = () => {
                     : "border-theme-border text-theme-text-muted hover:border-accent/30 hover:text-accent"
                 )}
                 title="Português"
+                aria-label="Mudar para Português"
+                aria-current={language === 'pt' ? 'true' : undefined}
               >
-                <FlagBR className="w-5 h-5" />
+                <FlagBR className="w-5 h-5" aria-hidden="true" />
                 <span className="text-xs font-bold uppercase hidden sm:inline">PT</span>
               </button>
             </div>

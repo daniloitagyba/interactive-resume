@@ -1,19 +1,21 @@
 # Interactive Resume - Danilo G. Itagyba Neto
 
-A modern, responsive, and bilingual professional portfolio.
+A modern, high-performance, responsive, and bilingual professional portfolio.
 
 ## 🚀 Technologies
-- **React 18** (Functional components & Hooks)
-- **Vite** (Fast build tool & dev server)
-- **TypeScript** (Static typing)
-- **Tailwind CSS v4** (Modern utility-first styling)
-- **Framer Motion** (Smooth UI animations & transitions)
-- **Lucide React** (Consistent iconography)
+- **React 18** (Functional components, Hooks, Suspense)
+- **Vite** (Next-generation frontend tooling)
+- **TypeScript** (Robust static typing)
+- **Tailwind CSS v4** (Advanced utility-first styling)
+- **Framer Motion** (Production-ready animations)
+- **Lucide React** (Modern icon set)
 
 ## ✨ Key Features
-- **Midnight Blue Theme**: A specialized dark theme designed for developer profiles.
-- **Bilingual Support (EN/PT)**: Complete content translation with a dedicated language context.
-- **Mobile First**: Fully optimized for all screen sizes.
+- **Midnight Blue Theme**: A specialized dark/light theme engine for developers.
+- **Bilingual Support (EN/PT)**: Scalable translation system using React Context.
+- **Optimized Performance**: Implementation of **Code Splitting** and **Lazy Loading** for core sections to ensure fast initial paint.
+- **Accessibility (a11y)**: Built with semantic HTML and ARIA attributes for better screen reader support.
+- **Mobile First**: Fluid layouts optimized for smartphones, tablets, and desktops.
 
 ## 🛠️ Setup & Execution
 1. **Install dependencies**:
@@ -30,6 +32,9 @@ A modern, responsive, and bilingual professional portfolio.
    ```
 
 ## 📂 Project Structure
-- `src/constants/data.ts`: Centralized data storage for all languages.
-- `src/components/`: Modular UI sections.
+- `src/constants/`: Modular data architecture (split into `data-en.ts` and `data-pt.ts` for better maintainability).
+- `src/components/`: Atomic UI components and layout sections.
 - `src/context/`: Global state management for Theme and Language.
+- `src/hooks/`: Custom hooks for translations and shared logic.
+- `src/utils/`: Shared helper functions for data formatting.
+

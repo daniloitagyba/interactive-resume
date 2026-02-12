@@ -1,6 +1,6 @@
 import { TRANSLATIONS } from '../constants/translations';
 
-export const calculateDuration = (startDate: Date, language: "en" | "pt") => {
+export const calculateDuration = (startDate: Date, language: "en" | "pt"): string => {
   const now = new Date();
   let years = now.getFullYear() - startDate.getFullYear();
   let months = now.getMonth() - startDate.getMonth();
