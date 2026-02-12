@@ -46,9 +46,8 @@ export const LINKS = {
 export const DATA: Record<"en" | "pt", PortfolioData> = {
   en: {
     title: "Senior Software Engineer",
-    shortSummary: "I am a full-stack developer with over a decade of experience.",
     summary:
-      "With over 15 years of experience in IT, I have built a solid foundation working for a decade with ERP, SQL, and Business Intelligence (BI). For the past 6 years, I have pivoted my career to focus on back-end software development. I have proven experience in the full software engineering lifecycle, designing and delivering robust solutions across diverse architectures.",
+      "With a solid career spanning over 15 years in Technology, I built a strong foundation working for a decade with ERP, SQL, and Business Intelligence (BI). For the past 6 years, I have shifted my career towards software engineering with a focus on back-end. I have experience in the complete software engineering lifecycle, designing, delivering, and maintaining robust solutions across various architectures.",
     experience: [
       {
         role: "Senior Software Engineer",
@@ -194,15 +193,22 @@ export const DATA: Record<"en" | "pt", PortfolioData> = {
       {
         degree: "Software Engineering",
         institution: "Uniamérica",
-        period: "January 2025 - December 2027",
+        period: "2025 - 2027",
+        description: "Focusing on modern software architecture, cloud-native development, and advanced engineering principles."
+      },      
+      {
+        degree: "Systems Analysis and Development",
+        institution: "Instituo Vianna Junior",
+        period: "2016 - 2018",
+        description: "Comprehensive foundation in software development, database management, and systems design, with a focus on practical application and problem-solving."
       },
-    ],
+
+    ]
   },
   pt: {
     title: "Engenheiro de Software Sênior",
-    shortSummary: "Sou desenvolvedor full-stack com mais de uma década de experiencia.",
     summary:
-      "Com uma trajetória de mais de 15 anos na área de TI, construí uma base sólida atuando por uma década com ERP, SQL e Business Intelligence (BI). Há 6 anos, direcionei minha carreira para a engenharia de software com foco em back-end. Tenho experiência no ciclo completo de engenharia de software, projetando, entregando e mantendo soluções robustas em diversas arquiteturas.",
+      "Com uma sólida carreira de mais de 15 anos em Tecnologia, construí uma base sólida atuando por uma década com ERP, SQL e Business Intelligence (BI). ​Há 6 anos, direcionei minha carreira para a engenharia de software com foco em back-end. Tenho experiência no ciclo completo de engenharia de software, projetando, entregando e mantendo soluções robustas em diversas arquiteturas.",
     experience: [
       {
         role: "Engenheiro de Software Sênior",
@@ -326,7 +332,7 @@ export const DATA: Record<"en" | "pt", PortfolioData> = {
         role: "Analista de Sistemas Sênior",
         company: "Multstock",
         location: "Belo Horizonte - MG",
-        period: "Maio 2011 - Junho 2012 (1 ano, 1 mês)",
+        period: "Maio 2011 - Junho 2012 (1 year, 1 mês)",
         description: [
           "Indústria/comércio de materiais de resgate.",
           "Customização de ERP (linguagem própria), desenvolvimento de relatórios/painéis em Power BI.",
@@ -351,8 +357,15 @@ export const DATA: Record<"en" | "pt", PortfolioData> = {
       {
         degree: "Engenharia de Software",
         institution: "Uniamérica",
-        period: "Janeiro 2025 a Dezembro 2027",
+        period: "2025 - 2027",
+        description: "Foco em arquitetura de software moderna, desenvolvimento cloud-native e princípios avançados de engenharia."
       },
-    ],
+      {
+        degree: "Systems Analysis and Development",
+        institution: "Instituo Vianna Junior",
+        period: "2016 - 2018",
+        description: "Base sólida em desenvolvimento de software, gerenciamento de banco de dados e design de sistemas, com foco em aplicação prática e resolução de problemas."
+      },
+    ]
   },
 };

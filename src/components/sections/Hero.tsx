@@ -48,7 +48,7 @@ const Hero: React.FC = () => {
             {data.title}
           </h3>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed">
-            {data.shortSummary}
+            {data.summary}
           </p>
           
           <div className="flex justify-center space-x-6">

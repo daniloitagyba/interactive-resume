@@ -1,4 +1,4 @@
-import { Terminal, Home, User, Briefcase, Code2 } from 'lucide-react';
+import { Terminal, Home, GraduationCap, Briefcase, Code2 } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
 import { cn } from '../../hooks/utils';
 import { FlagUS, FlagBR } from '../ui/Flags';
@@ -8,7 +8,7 @@ const Navbar: React.FC = () => {
 
   const navItems = [
     { id: 'home', label: language === 'en' ? 'Home' : 'Início', icon: Home },
-    { id: 'about', label: language === 'en' ? 'About' : 'Sobre', icon: User },
+    { id: 'education', label: language === 'en' ? 'Education' : 'Educação', icon: GraduationCap },
     { id: 'experience', label: language === 'en' ? 'Experience' : 'Experiência', icon: Briefcase },
     { id: 'skills', label: language === 'en' ? 'Skills' : 'Habilidades', icon: Code2 },
   ];
