@@ -1,47 +1,10 @@
 import { PortfolioData } from '../types';
 import { calculateDuration } from '../utils/formatters';
 
+export * from './personal';
+export * from './tech-stack';
+
 const lastJobStart = new Date(2024, 4);
-
-export const NAME = "Danilo Itagyba";
-
-export const TECH_STACK = [
-  "C#",
-  ".Net",
-  "Node",
-  "React",
-  "Javascript",
-  "Typescript",
-  "Clean Architecture",
-  "DDD",
-  "Design Patterns",
-  "SOLID",
-  "Microservices",
-  "Rest APIs",
-  "CI/CD",
-  "Azure",
-  "AWS",
-  "Docker",
-  "Kubernetes",
-  "T-SQL",
-  "PL/SQL",
-  "SQL Server",
-  "Oracle",
-  "MySql",
-  "PostgreSQL",
-  "Redis",
-  "RabbitMQ",
-  "Service Bus",
-  "Unit Tests",
-  "Integration Tests",
-];
-
-export const LINKS = {
-  linkedin: "https://www.linkedin.com/in/danilo-itagyba/",
-  github: "https://github.com/daniloitagyba",
-  blog: "https://dev.to/itagyba",
-  email: "daniloitagyba@gmail.com",
-};
 
 export const DATA: Record<"en" | "pt", PortfolioData> = {
   en: {

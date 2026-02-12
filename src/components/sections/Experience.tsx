@@ -1,35 +1,28 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useLanguage } from '../../context/LanguageContext';
+import { useTranslation } from '../../hooks/useTranslation';
+import { useVisibleItems } from '../../hooks/useVisibleItems';
 import { DATA } from '../../constants/data';
 import { Briefcase, ChevronDown, ChevronUp } from 'lucide-react';
 import ExperienceCard from '../ui/ExperienceCard';
 
 const Experience: React.FC = () => {
-  const { language } = useLanguage();
+  const { t, language } = useTranslation();
   const data = DATA[language];
-  const [showAll, setShowAll] = useState(false);
+  
+  const { showAll, toggleShowAll, visibleCount, hasMore } = useVisibleItems(
+    data.experience.length,
+    { initialCount: 2, sectionId: 'experience' }
+  );
 
-  const toggleShowAll = () => {
-    if (showAll) {
-      setTimeout(() => {
-        const element = document.getElementById('experience');
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100);
-    }
-    setShowAll(!showAll);
-  };
-
-  const displayedExperience = showAll ? data.experience : data.experience.slice(0, 2);
+  const displayedExperience = data.experience.slice(0, visibleCount);
 
   return (
     <section id="experience" className="section-padding">
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center gap-4 mb-12">
           <Briefcase className="text-accent" size={32} />
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white">{language === 'en' ? 'Work Experience' : 'Experiência Profissional'}</h2>
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white">{t.experience.title}</h2>
         </div>
 
         <motion.div layout className="space-y-12">
@@ -40,7 +33,7 @@ const Experience: React.FC = () => {
           </AnimatePresence>
         </motion.div>
 
-        {data.experience.length > 2 && (
+        {hasMore && (
           <motion.div layout className="mt-12 text-center">
             <button
               onClick={toggleShowAll}
@@ -48,11 +41,11 @@ const Experience: React.FC = () => {
             >
               {showAll ? (
                 <>
-                  {language === 'en' ? 'Show Less' : 'Ver Menos'} <ChevronUp size={20} />
+                  {t.experience.showLess} <ChevronUp size={20} />
                 </>
               ) : (
                 <>
-                  {language === 'en' ? 'Show More' : 'Ver Mais'} <ChevronDown size={20} />
+                  {t.experience.showMore} <ChevronDown size={20} />
                 </>
               )}
             </button>

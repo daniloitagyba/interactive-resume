@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Experience } from '../../types';
+import { cn } from '../../hooks/utils';
 
 interface ExperienceCardProps {
   exp: Experience;
@@ -46,7 +47,10 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ exp, index }) => {
             <span className="text-gray-500 dark:text-gray-400 text-sm ml-2">— {exp.location}</span>
           </p>
         </div>
-        <div className="text-[12px] font-bold text-white bg-accent/10 px-3 py-1 rounded-full border border-accent/10 mt-1 md:mt-0 shadow-sm backdrop-blur-sm">
+        <div className={cn(
+          "text-[12px] font-bold text-white bg-accent/10 px-3 py-1 rounded-full border border-accent/10",
+          "mt-1 md:mt-0 shadow-sm backdrop-blur-sm"
+        )}>
           {exp.period}
         </div>
       </div>

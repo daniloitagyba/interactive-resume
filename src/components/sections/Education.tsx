@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useLanguage } from '../../context/LanguageContext';
+import { useTranslation } from '../../hooks/useTranslation';
 import { DATA } from '../../constants/data';
 import { GraduationCap } from 'lucide-react';
 
 const Education: React.FC = () => {
-  const { language } = useLanguage();
+  const { t, language } = useTranslation();
   const data = DATA[language];
 
   return (
@@ -14,7 +14,7 @@ const Education: React.FC = () => {
         <div className="flex items-center gap-4 mb-12">
           <GraduationCap className="text-accent" size={32} />
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-            {language === 'en' ? 'Education' : 'Formação'}
+            {t.education.title}
           </h2>
         </div>
 

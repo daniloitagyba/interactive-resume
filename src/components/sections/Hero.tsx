@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Rss } from 'lucide-react';
-import { useLanguage } from '../../context/LanguageContext';
+import { useTranslation } from '../../hooks/useTranslation';
 import { DATA, NAME, LINKS } from '../../constants/data';
 
 const Hero: React.FC = () => {
-  const { language } = useLanguage();
+  const { t, language } = useTranslation();
   const data = DATA[language];
 
   return (
@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-accent text-xl md:text-2xl font-bold mb-4">
-            {language === 'en' ? "Hi, my name is" : "Olá, meu nome é"}
+            {t.hero.greeting}
           </h2>
           <h1 className="text-5xl md:text-7xl font-extrabold mb-6 text-gray-900 dark:text-white tracking-tight flex justify-center flex-wrap">
             {Array.from(NAME).map((char, index) => (

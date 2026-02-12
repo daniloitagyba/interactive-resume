@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { motion } from "framer-motion";
-import { useLanguage } from "../../context/LanguageContext";
+import { useTranslation } from "../../hooks/useTranslation";
 import { DATA, TECH_STACK } from "../../constants/data";
 import {
   Code2,
@@ -66,11 +66,9 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill, index }) => (
 );
 
 const Skills: React.FC = () => {
-  const { language } = useLanguage();
+  const { t } = useTranslation();
   
   const techStack = TECH_STACK;
-
-  const title = language === "en" ? "Technical Skills" : "Habilidades Técnicas";
 
   return (
     <section id="skills" className="section-padding bg-midnight-light/10" aria-labelledby="skills-title">
@@ -78,7 +76,7 @@ const Skills: React.FC = () => {
         <header className="flex items-center gap-4 mb-12">
           <Code2 className="text-accent" size={32} aria-hidden="true" />
           <h2 id="skills-title" className="text-3xl font-bold text-gray-900 dark:text-white">
-            {title}
+            {t.skills.title}
           </h2>
         </header>
 

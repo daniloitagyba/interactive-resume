@@ -1,3 +1,5 @@
+import { TRANSLATIONS } from '../constants/translations';
+
 export const calculateDuration = (startDate: Date, language: "en" | "pt") => {
   const now = new Date();
   let years = now.getFullYear() - startDate.getFullYear();
@@ -8,22 +10,16 @@ export const calculateDuration = (startDate: Date, language: "en" | "pt") => {
     months += 12;
   }
 
+  const t = TRANSLATIONS[language].common;
   const parts = [];
+
   if (years > 0) {
-    if (language === "en") {
-      parts.push(`${years} year${years > 1 ? "s" : ""}`);
-    } else {
-      parts.push(`${years} ano${years > 1 ? "s" : ""}`);
-    }
+    parts.push(`${years} ${years > 1 ? t.years : t.year}`);
   }
+  
   if (months > 0) {
-    if (language === "en") {
-      parts.push(`${months} month${months > 1 ? "s" : ""}`);
-    } else {
-      parts.push(`${months} ${months > 1 ? "meses" : "mês"}`);
-    }
+    parts.push(`${months} ${months > 1 ? t.months : t.month}`);
   }
 
-  const joiner = ", ";
-  return parts.join(joiner);
+  return parts.join(", ");
 };
