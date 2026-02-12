@@ -324,8 +324,8 @@ export const DATA: Record<"en" | "pt", PortfolioData> = {
         description: "Foco em arquitetura de software moderna, desenvolvimento cloud-native e princípios avançados de engenharia."
       },
       {
-        degree: "Systems Analysis and Development",
-        institution: "Instituo Vianna Junior",
+        degree: "Análise e Desenvolvimento de Sistemas",
+        institution: "Instituto Vianna Junior",
         period: "2016 - 2018",
         description: "Base sólida em desenvolvimento de software, gerenciamento de banco de dados e design de sistemas, com foco em aplicação prática e resolução de problemas."
       },

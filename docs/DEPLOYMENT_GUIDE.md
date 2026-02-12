@@ -14,17 +14,16 @@ This guide explains how to deploy your React/Vite application on a Linux Virtual
 1. **Clone and Build**:
    On your VM, clone the repository and build the project:
    ```bash
-   git clone <your-repo-url>
-   cd portifolio
-   npm install
-   npm run build
+   git clone https://github.com/daniloitagyba/interactive-resume.git
+   cd interactive-resume 
+   npm install && npm run build
    ```
 
 2. **Serve the Application**:
    Install a lightweight server like `serve` and use `pm2` to keep it running in the background:
    ```bash
    sudo npm install -g serve pm2
-   pm2 start "serve -s dist -l 3000" --name "portfolio"
+   pm2 start "serve -s dist -l 3000" --name "interactive-resume"
    pm2 save
    ```
    *Your app is now running locally on port 3000.*
@@ -38,5 +37,5 @@ Create a Cloudflare Tunnel via the dashboard at https://one.dash.cloudflare.com/
 ## Updating the Application on the VM
 
    ```bash
-cd portifolio && git pull && npm install && npm run build && pm2 restart portfolio
+cd interactive-resume && git pull && npm install && npm run build && pm2 restart interactive-resume
    ```
