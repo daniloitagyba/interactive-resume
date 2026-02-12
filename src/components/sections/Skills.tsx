@@ -53,8 +53,8 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill, index }) => (
     viewport={{ once: true }}
     transition={{ duration: 0.3, delay: index * 0.05 }}
     whileHover={{ scale: 1.05 }}
-    className="p-4 rounded-lg bg-white dark:bg-midnight-light border border-gray-200 dark:border-gray-700 
-               flex items-center gap-3 font-medium shadow-sm text-gray-800 dark:text-gray-200"
+    className="p-4 rounded-lg bg-theme-card border border-theme-border 
+               flex items-center gap-3 font-medium shadow-sm text-theme-text"
   >
     <span className="text-accent flex-shrink-0" aria-hidden="true">
       {getSkillIcon(skill)}
@@ -71,11 +71,11 @@ const Skills: React.FC = () => {
   const techStack = TECH_STACK;
 
   return (
-    <section id="skills" className="section-padding bg-midnight-light/10" aria-labelledby="skills-title">
+    <section id="skills" className="section-padding bg-theme-bg-secondary" aria-labelledby="skills-title">
       <div className="max-w-4xl mx-auto">
         <header className="flex items-center gap-4 mb-12">
           <Code2 className="text-accent" size={32} aria-hidden="true" />
-          <h2 id="skills-title" className="text-3xl font-bold text-gray-900 dark:text-white">
+          <h2 id="skills-title" className="text-3xl font-bold text-theme-text">
             {t.skills.title}
           </h2>
         </header>

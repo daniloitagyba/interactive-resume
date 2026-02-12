@@ -43,20 +43,20 @@ const Education: React.FC = () => {
 
                     <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                       <div>
-                        <h4 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-accent transition-colors">
+                        <h4 className="text-xl font-bold text-theme-text group-hover:text-accent transition-colors">
                           {edu.degree}
                         </h4>
                         <p className="font-medium">
                           <span className="text-accent">{edu.institution}</span>
                         </p>
                       </div>
-                      <div className="text-[12px] font-bold text-white bg-accent/10 px-3 py-1 rounded-full border border-accent/10 mt-1 md:mt-0 shadow-sm backdrop-blur-sm">
+                      <div className="text-[12px] font-bold text-accent bg-accent/10 px-3 py-1 rounded-full border border-accent/20 mt-1 md:mt-0 shadow-sm backdrop-blur-sm">
                         {edu.period}
                       </div>
                     </div>
 
                     {edu.description && (
-                      <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                      <p className="text-theme-text-muted leading-relaxed">
                         {edu.description}
                       </p>
                     )}

@@ -12,7 +12,7 @@ const App: React.FC = () => {
   return (
     <ThemeProvider>
       <LanguageProvider>
-        <div className="min-h-screen bg-white dark:bg-midnight text-gray-900 dark:text-white transition-colors duration-300">
+        <div className="min-h-screen transition-colors duration-300">
           <Navbar />
           <main>
             <Hero />

@@ -9,13 +9,23 @@
 
 @layer base {
   :root {
-    --background: #ffffff;
-    --foreground: #0b1120;
+    --background: #f8fafc;
+    --background-secondary: #f1f5f9;
+    --foreground: #0f172a;
+    --foreground-muted: #475569;
+    --border: #e2e8f0;
+    --card: #ffffff;
+    --card-foreground: #0f172a;
   }
 
   .dark {
     --background: #0b1120;
-    --foreground: #f8fafc;
+    --background-secondary: #0f172a;
+    --foreground: #f1f5f9;
+    --foreground-muted: #94a3b8;
+    --border: #1e293b;
+    --card: #111827;
+    --card-foreground: #f1f5f9;
   }
 
   body {
@@ -23,6 +33,21 @@
     color: var(--foreground);
     @apply transition-colors duration-300;
   }
+}
+
+@theme {
+  --color-midnight: #0b1120;
+  --color-midnight-light: #1e293b;
+  --color-accent: #38bdf8;
+  --color-accent-dark: #0284c7;
+  
+  /* Map theme variables to tailwind colors for easier use */
+  --color-theme-bg: var(--background);
+  --color-theme-bg-secondary: var(--background-secondary);
+  --color-theme-text: var(--foreground);
+  --color-theme-text-muted: var(--foreground-muted);
+  --color-theme-border: var(--border);
+  --color-theme-card: var(--card);
 }
 
 .nav-link {

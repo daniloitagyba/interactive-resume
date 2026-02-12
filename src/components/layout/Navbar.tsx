@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
   return (
     <nav className={cn(
       "fixed top-0 w-full z-50 transition-all duration-300 border-b",
-      "bg-white/90 dark:bg-midnight/90 backdrop-blur-md border-gray-200 dark:border-gray-800"
+      "bg-theme-bg/90 backdrop-blur-md border-theme-border"
     )}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
@@ -44,7 +44,7 @@ const Navbar: React.FC = () => {
               <button
                 key={item.id}
                 onClick={() => scrollTo(item.id)}
-                className="text-base font-bold text-gray-700 dark:text-gray-200 hover:text-accent dark:hover:text-accent transition-colors cursor-pointer flex items-center gap-2"
+                className="text-base font-bold text-theme-text hover:text-accent transition-colors cursor-pointer flex items-center gap-2"
               >
                 <item.icon size={20} />
                 {item.label}
@@ -55,7 +55,7 @@ const Navbar: React.FC = () => {
           <div className="flex items-center space-x-4">
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-md border border-gray-300 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:text-accent transition-all"
+              className="p-2 rounded-md border border-theme-border text-theme-text-muted hover:text-accent transition-all"
               title={theme === 'light' ? 'Dark Mode' : 'Light Mode'}
             >
               {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}

@@ -22,7 +22,7 @@ const Experience: React.FC = () => {
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center gap-4 mb-12">
           <Briefcase className="text-accent" size={32} />
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white">{t.experience.title}</h2>
+          <h2 className="text-3xl font-bold text-theme-text">{t.experience.title}</h2>
         </div>
 
         <motion.div layout className="space-y-12">

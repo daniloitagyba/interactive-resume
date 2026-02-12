@@ -41,21 +41,21 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ exp, index }) => {
       
       <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
         <div>
-          <h3 className="text-xl font-bold text-gray-900 dark:text-white">{exp.role}</h3>
+          <h3 className="text-xl font-bold text-theme-text">{exp.role}</h3>
           <p className="font-medium">
             <span className="text-accent">{exp.company}</span>
-            <span className="text-gray-500 dark:text-gray-400 text-sm ml-2">— {exp.location}</span>
+            <span className="text-theme-text-muted text-sm ml-2">— {exp.location}</span>
           </p>
         </div>
         <div className={cn(
-          "text-[12px] font-bold text-white bg-accent/10 px-3 py-1 rounded-full border border-accent/10",
+          "text-[12px] font-bold text-accent bg-accent/10 px-3 py-1 rounded-full border border-accent/20",
           "mt-1 md:mt-0 shadow-sm backdrop-blur-sm"
         )}>
           {exp.period}
         </div>
       </div>
 
-      <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300 mb-4">
+      <ul className="list-disc list-inside space-y-2 text-theme-text-muted mb-4">
         {exp.description.map((desc, i) => (
           <li key={i} className="leading-relaxed">{desc}</li>
         ))}

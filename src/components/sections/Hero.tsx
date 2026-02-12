@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
           <h2 className="text-accent text-xl md:text-2xl font-bold mb-4">
             {t.hero.greeting}
           </h2>
-          <h1 className="text-5xl md:text-7xl font-extrabold mb-6 text-gray-900 dark:text-white tracking-tight flex justify-center flex-wrap">
+          <h1 className="text-5xl md:text-7xl font-extrabold mb-6 text-theme-text tracking-tight flex justify-center flex-wrap">
             {Array.from(NAME).map((char, index) => (
               <motion.span
                 key={`${NAME}-${index}`}
@@ -44,10 +44,10 @@ const Hero: React.FC = () => {
               className="inline-block w-[3px] md:w-[5px] h-[0.8em] bg-accent ml-1 self-center"
             />
           </h1>
-          <h3 className="text-3xl md:text-5xl font-bold text-gray-600 dark:text-gray-400 mb-8">
+          <h3 className="text-3xl md:text-5xl font-bold text-theme-text-muted mb-8">
             {data.title}
           </h3>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+          <p className="text-lg text-theme-text-muted max-w-2xl mx-auto mb-10 leading-relaxed">
             {data.summary}
           </p>
           
