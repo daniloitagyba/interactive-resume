@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import { Suspense, lazy } from 'react';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import { ThemeProvider } from './context/ThemeContext';
@@ -15,25 +15,23 @@ const LoadingFallback = () => (
   </div>
 );
 
-const App: React.FC = () => {
-  return (
-    <ThemeProvider>
-      <LanguageProvider>
-        <div className="min-h-screen transition-colors duration-300">
-          <Navbar />
-          <main>
-            <Suspense fallback={<LoadingFallback />}>
-              <Hero />
-              <Education />
-              <Experience />
-              <Skills />
-            </Suspense>
-          </main>
-          <Footer />
-        </div>
-      </LanguageProvider>
-    </ThemeProvider>
-  );
-};
+const App = () => (
+  <ThemeProvider>
+    <LanguageProvider>
+      <div className="min-h-screen transition-colors duration-300">
+        <Navbar />
+        <main>
+          <Suspense fallback={<LoadingFallback />}>
+            <Hero />
+            <Education />
+            <Experience />
+            <Skills />
+          </Suspense>
+        </main>
+        <Footer />
+      </div>
+    </LanguageProvider>
+  </ThemeProvider>
+);
 
 export default App;

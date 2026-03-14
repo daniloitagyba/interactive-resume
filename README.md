@@ -2,9 +2,9 @@
 
 A modern, high-performance, responsive, and bilingual professional portfolio.
 
-🌐 Preview: https://itagyba.work/
+Preview: https://itagyba.work/
 
-## 🚀 Technologies
+## Technologies
 - **React 18** (Functional components, Hooks, Suspense)
 - **Vite** (Next-generation frontend tooling)
 - **TypeScript** (Robust static typing)
@@ -12,14 +12,16 @@ A modern, high-performance, responsive, and bilingual professional portfolio.
 - **Framer Motion** (Production-ready animations)
 - **Lucide React** (Modern icon set)
 
-## ✨ Key Features
-- **Midnight Blue Theme**: A specialized dark/light theme engine for developers.
+## Key Features
+- **Dark/Light Theme**: Theme engine with localStorage persistence.
 - **Bilingual Support (EN/PT)**: Scalable translation system using React Context.
-- **Optimized Performance**: Implementation of **Code Splitting** and **Lazy Loading** for core sections to ensure fast initial paint.
-- **Accessibility (a11y)**: Built with semantic HTML and ARIA attributes for better screen reader support.
+- **Single Source of Truth**: Unified data file with translatable fields and auto-generated periods from real dates.
+- **Optimized Performance**: Code Splitting and Lazy Loading for fast initial paint.
+- **Accessibility (a11y)**: Semantic HTML and ARIA attributes for screen reader support.
 - **Mobile First**: Fluid layouts optimized for smartphones, tablets, and desktops.
+- **CI/CD**: Automated deployment to VPS via GitHub Actions with Cloudflare Tunnel.
 
-## 🛠️ Setup & Execution
+## Setup & Execution
 1. **Install dependencies**:
    ```bash
    npm install
@@ -33,10 +35,14 @@ A modern, high-performance, responsive, and bilingual professional portfolio.
    npm run build
    ```
 
-## 📂 Project Structure
-- `src/constants/`: Modular data architecture (split into `data-en.ts` and `data-pt.ts` for better maintainability).
-- `src/components/`: Atomic UI components and layout sections.
+## Project Structure
+- `src/constants/resume-data.ts`: Single source of truth for all portfolio content with `{en, pt}` translatable fields.
+- `src/constants/data.ts`: Resolves resume data into language-specific `PortfolioData`.
+- `src/constants/translations.ts`: UI labels and navigation translations.
+- `src/components/`: UI components organized by layout, sections, and ui.
 - `src/context/`: Global state management for Theme and Language.
-- `src/hooks/`: Custom hooks for translations and shared logic.
-- `src/utils/`: Shared helper functions for data formatting.
+- `src/hooks/`: Custom hooks for translations and visibility logic.
+- `src/utils/`: Helpers for class merging (`cn`) and date formatting.
 
+## Deployment
+Automated via GitHub Actions on push to `main`. See [Deployment Guide](docs/DEPLOYMENT_GUIDE.md) for details.

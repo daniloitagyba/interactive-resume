@@ -1,10 +1,16 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Rss } from 'lucide-react';
 import { useTranslation } from '../../hooks/useTranslation';
 import { DATA, NAME, LINKS } from '../../constants/data';
 
-const Hero: React.FC = () => {
+const SOCIAL_LINKS = [
+  { href: LINKS.github, icon: Github, label: 'GitHub' },
+  { href: LINKS.linkedin, icon: Linkedin, label: 'LinkedIn' },
+  { href: LINKS.blog, icon: Rss, label: 'Blog' },
+  { href: `mailto:${LINKS.email}`, icon: Mail, label: 'Email' },
+];
+
+const Hero = () => {
   const { t, language } = useTranslation();
   const data = DATA[language];
 
@@ -25,22 +31,14 @@ const Hero: React.FC = () => {
                 key={`${NAME}-${index}`}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.1,
-                  delay: index * 0.16,
-                  ease: "easeOut",
-                }}
+                transition={{ duration: 0.1, delay: index * 0.16, ease: "easeOut" }}
               >
                 {char === " " ? "\u00A0" : char}
               </motion.span>
             ))}
             <motion.span
               animate={{ opacity: [0, 1, 0] }}
-              transition={{
-                duration: 0.8,
-                repeat: Infinity,
-                ease: "linear",
-              }}
+              transition={{ duration: 0.8, repeat: Infinity, ease: "linear" }}
               className="inline-block w-[3px] md:w-[5px] h-[0.8em] bg-accent ml-1 self-center"
             />
           </h1>
@@ -50,20 +48,20 @@ const Hero: React.FC = () => {
           <p className="text-lg text-theme-text-muted max-w-2xl mx-auto mb-10 leading-relaxed">
             {data.summary}
           </p>
-          
+
           <div className="flex justify-center space-x-6">
-            <a href={LINKS.github} target="_blank" rel="noopener noreferrer" className="nav-link">
-              <Github size={28} />
-            </a>
-            <a href={LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="nav-link">
-              <Linkedin size={28} />
-            </a>
-            <a href={LINKS.blog} target="_blank" rel="noopener noreferrer" className="nav-link" title="Blog">
-              <Rss size={28} />
-            </a>
-            <a href={`mailto:${LINKS.email}`} className="nav-link">
-              <Mail size={28} />
-            </a>
+            {SOCIAL_LINKS.map(({ href, icon: Icon, label }) => (
+              <a
+                key={label}
+                href={href}
+                target={label !== 'Email' ? '_blank' : undefined}
+                rel={label !== 'Email' ? 'noopener noreferrer' : undefined}
+                className="nav-link"
+                aria-label={label}
+              >
+                <Icon size={28} />
+              </a>
+            ))}
           </div>
         </motion.div>
       </div>

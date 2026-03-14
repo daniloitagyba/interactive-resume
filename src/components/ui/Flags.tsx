@@ -1,6 +1,4 @@
-import React from 'react';
-
-export const FlagUS: React.FC<{ className?: string }> = ({ className }) => (
+export const FlagUS = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" className={className}>
     <mask id="circleMaskUS">
       <circle cx="256" cy="256" r="256" fill="white" />
@@ -19,7 +17,7 @@ export const FlagUS: React.FC<{ className?: string }> = ({ className }) => (
   </svg>
 );
 
-export const FlagBR: React.FC<{ className?: string }> = ({ className }) => (
+export const FlagBR = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" className={className}>
     <mask id="circleMaskBR">
       <circle cx="256" cy="256" r="256" fill="white" />

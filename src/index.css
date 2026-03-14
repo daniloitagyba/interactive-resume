@@ -1,12 +1,5 @@
 @import "tailwindcss";
 
-@theme {
-  --color-midnight: #0b1120;
-  --color-midnight-light: #1e293b;
-  --color-accent: #38bdf8;
-  --color-accent-dark: #0284c7;
-}
-
 @layer base {
   :root {
     --background: #f8fafc;
@@ -40,8 +33,6 @@
   --color-midnight-light: #1e293b;
   --color-accent: #38bdf8;
   --color-accent-dark: #0284c7;
-  
-  /* Map theme variables to tailwind colors for easier use */
   --color-theme-bg: var(--background);
   --color-theme-bg-secondary: var(--background-secondary);
   --color-theme-text: var(--foreground);

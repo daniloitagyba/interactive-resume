@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from '../../hooks/useTranslation';
 import { useVisibleItems } from '../../hooks/useVisibleItems';
@@ -6,10 +5,10 @@ import { DATA } from '../../constants/data';
 import { Briefcase, ChevronDown, ChevronUp } from 'lucide-react';
 import ExperienceCard from '../ui/ExperienceCard';
 
-const Experience: React.FC = () => {
+const Experience = () => {
   const { t, language } = useTranslation();
   const data = DATA[language];
-  
+
   const { showAll, toggleShowAll, visibleCount, hasMore } = useVisibleItems(
     data.experience.length,
     { initialCount: 2, sectionId: 'experience' }
@@ -40,13 +39,9 @@ const Experience: React.FC = () => {
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-accent/10 text-accent hover:bg-accent/20 transition-all font-semibold"
             >
               {showAll ? (
-                <>
-                  {t.experience.showLess} <ChevronUp size={20} />
-                </>
+                <>{t.experience.showLess} <ChevronUp size={20} /></>
               ) : (
-                <>
-                  {t.experience.showMore} <ChevronDown size={20} />
-                </>
+                <>{t.experience.showMore} <ChevronDown size={20} /></>
               )}
             </button>
           </motion.div>

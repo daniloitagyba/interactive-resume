@@ -1,10 +1,9 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from '../../hooks/useTranslation';
 import { DATA } from '../../constants/data';
 import { GraduationCap } from 'lucide-react';
 
-const Education: React.FC = () => {
+const Education = () => {
   const { t, language } = useTranslation();
   const data = DATA[language];
 
@@ -28,10 +27,7 @@ const Education: React.FC = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="relative pl-10 group"
             >
-              {/* Vertical Line */}
               <div className="absolute left-[19px] top-0 bottom-0 w-0.5 bg-accent/30 group-hover:bg-accent transition-colors" />
-              
-              {/* Timeline Circle */}
               <div className="absolute left-[12px] top-0 w-4 h-4 rounded-full bg-accent z-10 scale-100 group-hover:scale-110 transition-transform" />
 
               <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">

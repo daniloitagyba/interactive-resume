@@ -2,10 +2,10 @@ import { Terminal, Home, GraduationCap, Briefcase, Code2, Moon, Sun } from 'luci
 import { useLanguage } from '../../context/LanguageContext';
 import { useTheme } from '../../context/ThemeContext';
 import { useTranslation } from '../../hooks/useTranslation';
-import { cn } from '../../hooks/utils';
+import { cn } from '../../utils/cn';
 import { FlagUS, FlagBR } from '../ui/Flags';
 
-const Navbar: React.FC = () => {
+const Navbar = () => {
   const { language, setLanguage } = useLanguage();
   const { theme, toggleTheme } = useTheme();
   const { t } = useTranslation();
@@ -18,11 +18,16 @@ const Navbar: React.FC = () => {
   ];
 
   const scrollTo = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
+
+  const languageButtonClass = (isActive: boolean) =>
+    cn(
+      "p-2 rounded-md transition-all flex items-center gap-2 border",
+      isActive
+        ? "bg-accent/20 border-accent text-accent shadow-[0_0_10px_rgba(56,189,248,0.2)]"
+        : "border-theme-border text-theme-text-muted hover:border-accent/30 hover:text-accent"
+    );
 
   return (
     <nav className={cn(
@@ -31,15 +36,14 @@ const Navbar: React.FC = () => {
     )}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
-          <button 
-            onClick={() => scrollTo('home')} 
+          <button
+            onClick={() => scrollTo('home')}
             className="flex-shrink-0 text-accent hover:scale-110 transition-transform cursor-pointer"
-            title="Home"
             aria-label={t.nav.home}
           >
             <Terminal size={36} strokeWidth={2.5} />
           </button>
-          
+
           <div className="hidden md:flex space-x-10">
             {navItems.map((item) => (
               <button
@@ -57,7 +61,6 @@ const Navbar: React.FC = () => {
             <button
               onClick={toggleTheme}
               className="p-2 rounded-md border border-theme-border text-theme-text-muted hover:text-accent transition-all"
-              title={theme === 'light' ? 'Dark Mode' : 'Light Mode'}
               aria-label={theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
             >
               {theme === 'light' ? <Moon size={20} aria-hidden="true" /> : <Sun size={20} aria-hidden="true" />}
@@ -66,29 +69,17 @@ const Navbar: React.FC = () => {
             <div className="flex items-center space-x-2">
               <button
                 onClick={() => setLanguage('en')}
-                className={cn(
-                  "p-2 rounded-md transition-all flex items-center gap-2 border",
-                  language === 'en' 
-                    ? "bg-accent/20 border-accent text-accent shadow-[0_0_10px_rgba(56,189,248,0.2)]" 
-                    : "border-theme-border text-theme-text-muted hover:border-accent/30 hover:text-accent"
-                )}
-                title="English"
+                className={languageButtonClass(language === 'en')}
                 aria-label="Switch to English"
                 aria-current={language === 'en' ? 'true' : undefined}
               >
                 <FlagUS className="w-5 h-5" aria-hidden="true" />
                 <span className="text-xs font-bold uppercase hidden sm:inline">EN</span>
               </button>
-              
+
               <button
                 onClick={() => setLanguage('pt')}
-                className={cn(
-                  "p-2 rounded-md transition-all flex items-center gap-2 border",
-                  language === 'pt' 
-                    ? "bg-accent/20 border-accent text-accent shadow-[0_0_10px_rgba(56,189,248,0.2)]" 
-                    : "border-theme-border text-theme-text-muted hover:border-accent/30 hover:text-accent"
-                )}
-                title="Português"
+                className={languageButtonClass(language === 'pt')}
                 aria-label="Mudar para Português"
                 aria-current={language === 'pt' ? 'true' : undefined}
               >
