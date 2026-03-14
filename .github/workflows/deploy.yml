@@ -1,0 +1,44 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: ${{ secrets.VPS_SSH_PORT || 22 }}
+          script: |
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+            APP_DIR="$HOME/interactive-resume"
+            APP_NAME="interactive-resume"
+            APP_PORT=3001
+
+            # Clone if first deploy, otherwise pull
+            if [ ! -d "$APP_DIR" ]; then
+              git clone https://github.com/daniloitagyba/interactive-resume.git "$APP_DIR"
+            fi
+
+            cd "$APP_DIR"
+            git pull origin main
+
+            npm install --production=false
+            npm run build
+
+            # Restart or start PM2 process
+            if pm2 describe "$APP_NAME" > /dev/null 2>&1; then
+              pm2 restart "$APP_NAME"
+            else
+              pm2 start "npx serve -s dist -l $APP_PORT" --name "$APP_NAME"
+              pm2 save
+            fi

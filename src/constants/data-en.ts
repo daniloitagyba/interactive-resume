@@ -5,7 +5,7 @@ import { lastJobStart } from './common';
 export const dataEn: PortfolioData = {
     title: "Senior Software Engineer",
     summary:
-      "With a solid career spanning over 15 years in Technology, I built a strong foundation working for a decade with ERP, SQL, and Business Intelligence (BI). For the past 6 years, I have shifted my career towards software engineering with a focus on back-end. I have experience in the complete software engineering lifecycle, designing, delivering, and maintaining robust solutions across various architectures.",
+      "With 16 years of experience in IT, including 10 years dedicated to ERP, SQL, and BI, I transitioned to software engineering 6 years ago. Since then, I have worked across the entire development cycle, creating efficient solutions, modernizing legacy systems, optimizing performance, and implementing automated tests to ensure robust, scalable, and high-quality applications.",
     experience: [
       {
         role: "Senior Software Engineer",

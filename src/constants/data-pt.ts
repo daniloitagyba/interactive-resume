@@ -5,7 +5,7 @@ import { lastJobStart } from './common';
 export const dataPt: PortfolioData = {
     title: "Engenheiro de Software Sênior",
     summary:
-      "Com uma sólida carreira de mais de 15 anos em Tecnologia, construí uma base sólida atuando por uma década com ERP, SQL e Business Intelligence (BI). ​Há 6 anos, direcionei minha carreira para a engenharia de software com foco em back-end. Tenho experiência no ciclo completo de engenharia de software, projetando, entregando e mantendo soluções robustas em diversas arquiteturas.",
+      "Com 16 anos de experiência em TI, sendo 10 anos dedicados a ERP, SQL e BI, migrei há 6 anos para a engenharia de software. Desde então, atuo no ciclo completo de desenvolvimento, criando soluções, modernizando sistemas legados, otimizando performance e implementando testes automatizados para garantir aplicações robustas e escaláveis.",
     experience: [
       {
         role: "Engenheiro de Software Sênior",
