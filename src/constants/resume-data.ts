@@ -6,8 +6,8 @@ export const RESUME_DATA: ResumeData = {
     pt: "Engenheiro de Software Sênior",
   },
   summary: {
-    en: "With 16 years of experience in IT, including 10 years dedicated to ERP, SQL, and BI, I transitioned to software engineering 6 years ago. Since then, I have worked across the entire development cycle, creating efficient solutions, modernizing legacy systems, optimizing performance, and implementing automated tests to ensure robust, scalable, and high-quality applications.",
-    pt: "Com 16 anos de experiência em TI, sendo 10 anos dedicados a ERP, SQL e BI, migrei há 6 anos para a engenharia de software. Desde então, atuo no ciclo completo de desenvolvimento, criando soluções, modernizando sistemas legados, otimizando performance e implementando testes automatizados para garantir aplicações robustas e escaláveis.",
+    en: "With 16 years of experience in IT, including 10 years dedicated to ERP, SQL, and BI, I transitioned to software engineering 6 years ago. I have worked across the entire development cycle, creating efficient solutions, modernizing legacy systems, optimizing performance and implementing automated tests to ensure robust, scalable and high-quality applications.",
+    pt: "Com 16 anos de experiência em TI, sendo 10 anos dedicados a ERP, SQL e BI, migrei há 6 anos para a engenharia de software. Tenho experiência no ciclo completo de desenvolvimento, criando soluções, modernizando sistemas legados, otimizando performance e implementando testes automatizados, garantindo aplicações robustas e escaláveis.",
   },
   experience: [
     {
