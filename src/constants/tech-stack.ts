@@ -1,8 +1,11 @@
 export const TECH_STACK = [
   "C#",
   ".Net",
+  "ASP.NET Core",
   "Node",
   "React",
+  "Next.js",
+  "React Native",
   "Javascript",
   "Typescript",
   "Clean Architecture",

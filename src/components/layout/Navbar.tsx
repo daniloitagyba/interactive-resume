@@ -1,4 +1,4 @@
-import { Terminal, Home, GraduationCap, Briefcase, Code2, Moon, Sun } from 'lucide-react';
+import { Terminal, Home, GraduationCap, Briefcase, Code2, Moon, Sun, Award, Languages } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
 import { useTheme } from '../../context/ThemeContext';
 import { useTranslation } from '../../hooks/useTranslation';
@@ -13,8 +13,10 @@ const Navbar = () => {
   const navItems = [
     { id: 'home', label: t.nav.home, icon: Home },
     { id: 'education', label: t.nav.education, icon: GraduationCap },
+    { id: 'certifications', label: t.nav.certifications, icon: Award },
     { id: 'experience', label: t.nav.experience, icon: Briefcase },
     { id: 'skills', label: t.nav.skills, icon: Code2 },
+    { id: 'languages', label: t.nav.languages, icon: Languages },
   ];
 
   const scrollTo = (id: string) => {
@@ -44,12 +46,12 @@ const Navbar = () => {
             <Terminal size={36} strokeWidth={2.5} />
           </button>
 
-          <div className="hidden md:flex space-x-10">
+          <div className="hidden lg:flex gap-7">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollTo(item.id)}
-                className="text-base font-bold text-theme-text hover:text-accent transition-colors cursor-pointer flex items-center gap-2"
+                className="text-sm font-bold text-theme-text hover:text-accent transition-colors cursor-pointer flex items-center gap-2 whitespace-nowrap"
               >
                 <item.icon size={20} aria-hidden="true" />
                 {item.label}

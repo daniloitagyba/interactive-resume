@@ -45,9 +45,21 @@ const Hero = () => {
           <h3 className="text-3xl md:text-5xl font-bold text-theme-text-muted mb-8">
             {data.title}
           </h3>
-          <p className="text-lg text-theme-text-muted max-w-2xl mx-auto mb-10 leading-relaxed">
-            {data.summary}
-          </p>
+          <div className="max-w-3xl mx-auto mb-10">
+            <p className="text-xl md:text-2xl font-medium text-theme-text leading-relaxed">
+              {data.summary}
+            </p>
+            <p className="mt-5 text-base md:text-lg font-medium text-theme-text-muted leading-relaxed">
+              {data.highlights.map((highlight, index) => (
+                <span key={highlight}>
+                  {index > 0 && (
+                    <span className="mx-2 text-accent" aria-hidden="true">•</span>
+                  )}
+                  {highlight}
+                </span>
+              ))}
+            </p>
+          </div>
 
           <div className="flex justify-center space-x-6">
             {SOCIAL_LINKS.map(({ href, icon: Icon, label }) => (

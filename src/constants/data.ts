@@ -9,6 +9,7 @@ export { TECH_STACK } from './tech-stack';
 const resolveData = (language: Language): PortfolioData => ({
   title: RESUME_DATA.title[language],
   summary: RESUME_DATA.summary[language],
+  highlights: RESUME_DATA.highlights[language],
   experience: RESUME_DATA.experience.map((exp) => ({
     role: exp.role[language],
     company: exp.company,
@@ -20,8 +21,18 @@ const resolveData = (language: Language): PortfolioData => ({
   education: RESUME_DATA.education.map((edu) => ({
     degree: edu.degree[language],
     institution: edu.institution,
-    period: edu.period,
+    period: edu.period[language],
     description: edu.description?.[language],
+  })),
+  certifications: RESUME_DATA.certifications.map((certification) => ({
+    name: certification.name[language],
+    issuer: certification.issuer,
+    issued: certification.issued?.[language],
+    credentialId: certification.credentialId,
+  })),
+  languages: RESUME_DATA.languages.map((item) => ({
+    name: item.name[language],
+    proficiency: item.proficiency[language],
   })),
 });
 

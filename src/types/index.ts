@@ -16,15 +16,30 @@ export interface RawExperience {
 export interface RawEducation {
   degree: Translatable;
   institution: string;
-  period: string;
+  period: Translatable;
   description?: Translatable;
+}
+
+export interface RawCertification {
+  name: Translatable;
+  issuer?: string;
+  issued?: Translatable;
+  credentialId?: string;
+}
+
+export interface RawLanguage {
+  name: Translatable;
+  proficiency: Translatable;
 }
 
 export interface ResumeData {
   title: Translatable;
   summary: Translatable;
+  highlights: TranslatableList;
   experience: RawExperience[];
   education: RawEducation[];
+  certifications: RawCertification[];
+  languages: RawLanguage[];
 }
 
 export interface Experience {
@@ -43,9 +58,24 @@ export interface Education {
   description?: string;
 }
 
+export interface Certification {
+  name: string;
+  issuer?: string;
+  issued?: string;
+  credentialId?: string;
+}
+
+export interface LanguageSkill {
+  name: string;
+  proficiency: string;
+}
+
 export interface PortfolioData {
   title: string;
   summary: string;
+  highlights: string[];
   experience: Experience[];
   education: Education[];
+  certifications: Certification[];
+  languages: LanguageSkill[];
 }

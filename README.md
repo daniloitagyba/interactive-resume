@@ -19,7 +19,7 @@ Preview: https://itagyba.work/
 - **Optimized Performance**: Code Splitting and Lazy Loading for fast initial paint.
 - **Accessibility (a11y)**: Semantic HTML and ARIA attributes for screen reader support.
 - **Mobile First**: Fluid layouts optimized for smartphones, tablets, and desktops.
-- **CI/CD**: Automated deployment to VPS via GitHub Actions with Cloudflare Tunnel.
+- **CI/CD**: Automated deployment to GitHub Pages via GitHub Actions without repository secrets.
 
 ## Setup & Execution
 1. **Install dependencies**:
@@ -45,4 +45,6 @@ Preview: https://itagyba.work/
 - `src/utils/`: Helpers for class merging (`cn`) and date formatting.
 
 ## Deployment
-Automated via GitHub Actions on push to `main`. See [Deployment Guide](docs/DEPLOYMENT_GUIDE.md) for details.
+Automated via GitHub Actions on push to `main` or manual `workflow_dispatch`. The workflow builds the Vite app and deploys the `dist` artifact to GitHub Pages using the short-lived `GITHUB_TOKEN` provided by GitHub Actions.
+
+For the default project Pages URL, no variables or secrets are required. For a custom domain hosted at the root path, set the public repository variable `BASE_PATH=/`.
