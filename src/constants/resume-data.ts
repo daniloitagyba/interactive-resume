@@ -329,23 +329,6 @@ export const RESUME_DATA: ResumeData = {
         pt: "Emitido em mai. de 2022",
       },
     },
-    {
-      name: {
-        en: "C# Fundamentals",
-        pt: "C# Fundamentals",
-      },
-      issuer: "Pluralsight",
-      issued: {
-        en: "Issued Aug 2021",
-        pt: "Emitido em ago. de 2021",
-      },
-    },
-    {
-      name: {
-        en: "Java Developer - 148 hours",
-        pt: "Desenvolvedor Java - 148 horas",
-      },
-    },
   ],
   languages: [
     {
