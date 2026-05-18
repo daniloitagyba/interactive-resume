@@ -49,16 +49,6 @@ const Hero = () => {
             <p className="text-xl md:text-2xl font-medium text-theme-text leading-relaxed">
               {data.summary}
             </p>
-            <p className="mt-5 text-base md:text-lg font-medium text-theme-text-muted leading-relaxed">
-              {data.highlights.map((highlight, index) => (
-                <span key={highlight}>
-                  {index > 0 && (
-                    <span className="mx-2 text-accent" aria-hidden="true">•</span>
-                  )}
-                  {highlight}
-                </span>
-              ))}
-            </p>
           </div>
 
           <div className="flex justify-center space-x-6">

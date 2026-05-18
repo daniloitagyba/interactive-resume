@@ -9,7 +9,6 @@ export { TECH_STACK } from './tech-stack';
 const resolveData = (language: Language): PortfolioData => ({
   title: RESUME_DATA.title[language],
   summary: RESUME_DATA.summary[language],
-  highlights: RESUME_DATA.highlights[language],
   experience: RESUME_DATA.experience.map((exp) => ({
     role: exp.role[language],
     company: exp.company,

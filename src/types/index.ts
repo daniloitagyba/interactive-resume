@@ -35,7 +35,6 @@ export interface RawLanguage {
 export interface ResumeData {
   title: Translatable;
   summary: Translatable;
-  highlights: TranslatableList;
   experience: RawExperience[];
   education: RawEducation[];
   certifications: RawCertification[];
@@ -73,7 +72,6 @@ export interface LanguageSkill {
 export interface PortfolioData {
   title: string;
   summary: string;
-  highlights: string[];
   experience: Experience[];
   education: Education[];
   certifications: Certification[];

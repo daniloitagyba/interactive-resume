@@ -9,24 +9,6 @@ export const RESUME_DATA: ResumeData = {
     en: "I transformed 16 years of IT experience into a unique specialty: modern software engineering focused on critical systems and generative AI to accelerate development.",
     pt: "Transformei 16 anos de experiência em TI em uma especialidade única: engenharia de software moderna com foco em sistemas críticos e IA generativa para acelerar desenvolvimento.",
   },
-  highlights: {
-    en: [
-      "More than 6 years evolving applications through full-cycle software engineering",
-      "Legacy systems modernization",
-      "Performance optimization",
-      "Automated test implementation",
-      "Extreme Programming (XP)",
-      "Advanced use of tools such as Codex and Claude for automation and productivity",
-    ],
-    pt: [
-      "Mais de 6 anos evoluindo aplicações para engenharia de software full-cycle",
-      "Modernização de sistemas legados",
-      "Otimização de performance",
-      "Implementação de testes automatizados",
-      "Extreme Programming (XP)",
-      "Uso avançado de ferramentas como Codex e Claude para automação e produtividade",
-    ],
-  },
   experience: [
     {
       role: {
