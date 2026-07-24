@@ -5,7 +5,6 @@ export const TRANSLATIONS = {
       education: 'Education',
       experience: 'Experience',
       skills: 'Skills',
-      certifications: 'Certifications',
       languages: 'Languages',
     },
     hero: {
@@ -21,10 +20,6 @@ export const TRANSLATIONS = {
     },
     skills: {
       title: 'Technical Skills',
-    },
-    certifications: {
-      title: 'Licenses & Certifications',
-      credentialId: 'Credential ID',
     },
     languages: {
       title: 'Languages',
@@ -46,7 +41,6 @@ export const TRANSLATIONS = {
       education: 'Educação',
       experience: 'Experiência',
       skills: 'Habilidades',
-      certifications: 'Certificações',
       languages: 'Idiomas',
     },
     hero: {
@@ -62,10 +56,6 @@ export const TRANSLATIONS = {
     },
     skills: {
       title: 'Habilidades Técnicas',
-    },
-    certifications: {
-      title: 'Licenças e Certificados',
-      credentialId: 'Nº da credencial',
     },
     languages: {
       title: 'Idiomas',

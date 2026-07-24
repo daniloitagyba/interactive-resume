@@ -6,8 +6,8 @@ export const RESUME_DATA: ResumeData = {
     pt: "Engenheiro de Software Sênior",
   },
   summary: {
-    en: "I transformed 16 years of IT experience into a unique specialty: modern software engineering focused on critical systems and generative AI to accelerate development.",
-    pt: "Transformei 16 anos de experiência em TI em uma especialidade única: engenharia de software moderna com foco em sistemas críticos e IA generativa para acelerar desenvolvimento.",
+    en: "I design and build scalable, reliable software systems using microservices and modular monolith architectures.\n\nMy work is guided by proven engineering practices, including Clean Code, SOLID principles, Domain-Driven Design, Design Patterns, Clean Architecture, CI/CD and observability.",
+    pt: "Projeto e desenvolvo sistemas de software escaláveis e confiáveis utilizando arquiteturas de microsserviços e monólitos modulares.\n\nMeu trabalho é orientado por práticas consolidadas de engenharia, incluindo Clean Code, princípios SOLID, Domain-Driven Design, padrões de projeto, Clean Architecture, CI/CD e observabilidade.",
   },
   experience: [
     {
@@ -25,19 +25,32 @@ export const RESUME_DATA: ResumeData = {
       description: {
         en: [
           "Developed and maintained a full inventory management system for health tech, integrating RFID with .NET Core for efficient tracking of medical products.",
-          "Implemented a microservices architecture and automated Biotracker inventory workflows using React and TypeScript on the frontend.",
+          "Created notification services that send critical information to thousands of customers daily, including product expiration dates and storage-temperature alerts, enabling precise control of high-value products.",
           "Delivered a robust full-stack solution with CI/CD via Azure Pipelines, unit, integration and end-to-end tests, plus monitoring for high availability.",
         ],
         pt: [
           "Desenvolvimento e manutenção de um sistema completo de gestão de estoque para health tech, integrando RFID com .NET Core para rastreamento eficiente de produtos médicos.",
-          "Implementei arquitetura de microservices, automatizando fluxos de estoque do Projeto Biotracker usando React e TypeScript no frontend.",
           "Entreguei solução full-stack robusta com CI/CD via Azure Pipelines, testes unitários, testes de integração, end-to-end e monitoramento para alta disponibilidade.",
         ],
       },
       technologies: [
-        "C#", ".NET Core", ".NET Framework", "T-SQL", "Microservices", "REST", "SOAP",
-        "RabbitMQ", "SQL Server", "Redis", "JavaScript", "TypeScript", "React", "CI/CD",
-        "Azure Pipelines", "Dynatrace", "End-to-end Tests",
+        "C#",
+        ".NET Core",
+        ".NET Framework",
+        "T-SQL",
+        "Microservices",
+        "REST",
+        "SOAP",
+        "RabbitMQ",
+        "SQL Server",
+        "Redis",
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "CI/CD",
+        "Azure Pipelines",
+        "Dynatrace",
+        "End-to-end Tests",
       ],
     },
     {
@@ -54,7 +67,7 @@ export const RESUME_DATA: ResumeData = {
       endDate: new Date(2024, 1),
       description: {
         en: [
-          "Developed critical financial reconciliation solutions for Cielo E-Commerce, optimizing processes between acquirers and the financial system.",
+          "Developed services that process millions of sales records every day, perform automated reconciliations, and deliver accurate business information on time.",
           "Maintained and improved dozens of .NET and .NET Core applications in hybrid infrastructure with Windows VMs and Kubernetes, ensuring high performance.",
           "Implemented robust CI/CD pipelines with Azure DevOps, automating deployments and reducing feature delivery time.",
         ],
@@ -65,9 +78,21 @@ export const RESUME_DATA: ResumeData = {
         ],
       },
       technologies: [
-        "C#", ".NET Core", ".NET Framework", "T-SQL", "Microservices", "REST", "SOAP",
-        "RabbitMQ", "SQL Server", "Redis", "CI/CD", "Azure DevOps", "Azure Pipelines",
-        "Datadog", "Fluent Validator",
+        "C#",
+        ".NET Core",
+        ".NET Framework",
+        "T-SQL",
+        "Microservices",
+        "REST",
+        "SOAP",
+        "RabbitMQ",
+        "SQL Server",
+        "Redis",
+        "CI/CD",
+        "Azure DevOps",
+        "Azure Pipelines",
+        "Datadog",
+        "Fluent Validator",
       ],
     },
     {
@@ -84,7 +109,7 @@ export const RESUME_DATA: ResumeData = {
       endDate: new Date(2021, 9),
       description: {
         en: [
-          "Built complex integrations between a healthcare marketplace and multiple ERPs, connecting buyers and sellers through REST and SOAP APIs.",
+          "Built microservices that collect thousands of data points daily from ERP systems and make them available across online marketplaces.",
           "Developed scalable .NET Core microservices with Azure Functions, processing Portal Bionexo transactions efficiently.",
         ],
         pt: [
@@ -93,8 +118,19 @@ export const RESUME_DATA: ResumeData = {
         ],
       },
       technologies: [
-        "C#", ".NET Core", ".NET Framework", "ASP.NET MVC", "Microservices", "REST", "SOAP",
-        "T-SQL", "PL/SQL", "SQL Server", "Azure Pipelines", "Azure Functions", "Fluent Validator",
+        "C#",
+        ".NET Core",
+        ".NET Framework",
+        "ASP.NET MVC",
+        "Microservices",
+        "REST",
+        "SOAP",
+        "T-SQL",
+        "PL/SQL",
+        "SQL Server",
+        "Azure Pipelines",
+        "Azure Functions",
+        "Fluent Validator",
       ],
     },
     {
@@ -224,21 +260,6 @@ export const RESUME_DATA: ResumeData = {
       description: {
         en: "Focusing on modern software architecture, cloud-native development, and advanced engineering principles.",
         pt: "Foco em arquitetura de software moderna, desenvolvimento cloud-native e princípios avançados de engenharia.",
-      },
-    },
-    {
-      degree: {
-        en: "Systems Analysis and Development",
-        pt: "Análise e Desenvolvimento de Sistemas",
-      },
-      institution: "Instituto Vianna Júnior",
-      period: {
-        en: "2016 - 2018",
-        pt: "2016 - 2018",
-      },
-      description: {
-        en: "Comprehensive foundation in software development, database management, and systems design, with a focus on practical application and problem-solving.",
-        pt: "Base sólida em desenvolvimento de software, gerenciamento de banco de dados e design de sistemas, com foco em aplicação prática e resolução de problemas.",
       },
     },
   ],

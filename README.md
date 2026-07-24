@@ -35,6 +35,16 @@ Preview: https://itagyba.work/
    npm run build
    ```
 
+## Local Resume Editor
+
+Run `npm run dev` and open [http://localhost:5173/editar](http://localhost:5173/editar), or use the pencil button in the local navigation bar.
+
+- The editor covers the bilingual summary, experience, skills, education, and languages.
+- Descriptions and technologies use one item per line, matching the current UI data model.
+- Saving validates the data and rewrites `src/constants/resume-data.ts` and `src/constants/tech-stack.ts`; Vite then refreshes the preview through HMR.
+- The route, navigation button, and write API are development-only. The API additionally rejects non-loopback connections.
+- Review the generated diff and run `npm run build` before committing or deploying.
+
 ## Project Structure
 - `src/constants/resume-data.ts`: Single source of truth for all portfolio content with `{en, pt}` translatable fields.
 - `src/constants/data.ts`: Resolves resume data into language-specific `PortfolioData`.
