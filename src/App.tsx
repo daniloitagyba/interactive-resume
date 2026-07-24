@@ -5,10 +5,9 @@ import { ThemeProvider } from './context/ThemeContext';
 import { LanguageProvider } from './context/LanguageContext';
 
 const Hero = lazy(() => import('./components/sections/Hero'));
-const Education = lazy(() => import('./components/sections/Education'));
-const Certifications = lazy(() => import('./components/sections/Certifications'));
 const Experience = lazy(() => import('./components/sections/Experience'));
 const Skills = lazy(() => import('./components/sections/Skills'));
+const Education = lazy(() => import('./components/sections/Education'));
 const Languages = lazy(() => import('./components/sections/Languages'));
 
 const LoadingFallback = () => (
@@ -25,10 +24,9 @@ const App = () => (
         <main>
           <Suspense fallback={<LoadingFallback />}>
             <Hero />
-            <Education />
-            <Certifications />
             <Experience />
             <Skills />
+            <Education />
             <Languages />
           </Suspense>
         </main>

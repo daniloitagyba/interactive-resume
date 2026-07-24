@@ -1,4 +1,4 @@
-import { Terminal, Home, GraduationCap, Briefcase, Code2, Moon, Sun, Award, Languages } from 'lucide-react';
+import { Terminal, Home, GraduationCap, Briefcase, Code2, Moon, Sun, Languages, Pencil } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
 import { useTheme } from '../../context/ThemeContext';
 import { useTranslation } from '../../hooks/useTranslation';
@@ -9,13 +9,14 @@ const Navbar = () => {
   const { language, setLanguage } = useLanguage();
   const { theme, toggleTheme } = useTheme();
   const { t } = useTranslation();
+  const isLocalDevelopment =
+    import.meta.env.DEV && ['localhost', '127.0.0.1', '[::1]'].includes(window.location.hostname);
 
   const navItems = [
     { id: 'home', label: t.nav.home, icon: Home },
-    { id: 'education', label: t.nav.education, icon: GraduationCap },
-    { id: 'certifications', label: t.nav.certifications, icon: Award },
     { id: 'experience', label: t.nav.experience, icon: Briefcase },
     { id: 'skills', label: t.nav.skills, icon: Code2 },
+    { id: 'education', label: t.nav.education, icon: GraduationCap },
     { id: 'languages', label: t.nav.languages, icon: Languages },
   ];
 
@@ -60,6 +61,17 @@ const Navbar = () => {
           </div>
 
           <div className="flex items-center space-x-4">
+            {isLocalDevelopment && (
+              <a
+                href="/editar"
+                className="p-2 rounded-md border border-amber-500/40 text-amber-600 dark:text-amber-400 hover:bg-amber-500/10 transition-all"
+                aria-label="Abrir editor local do currículo"
+                title="Editar currículo"
+              >
+                <Pencil size={20} aria-hidden="true" />
+              </a>
+            )}
+
             <button
               onClick={toggleTheme}
               className="p-2 rounded-md border border-theme-border text-theme-text-muted hover:text-accent transition-all"
