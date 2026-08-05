@@ -74,8 +74,14 @@ jobs:
       - name: Restart app with PM2
         run: |
           ssh "$VPS_USER@$VPS_HOST" "
+            whoami
+            echo HOME=\$HOME
+            echo NVM_DIR_CHECK:
+            ls -la \$HOME/.nvm/nvm.sh || echo MISSING
             export NVM_DIR=\$HOME/.nvm
             [ -s \$NVM_DIR/nvm.sh ] && . \$NVM_DIR/nvm.sh
+            echo AFTER_SOURCE_TYPE:
+            type nvm || echo NVM_FUNC_MISSING
             nvm use default > /dev/null
 
             APP_DIR=\$HOME/${APP_DIR}
