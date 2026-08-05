@@ -73,23 +73,23 @@ jobs:
 
       - name: Restart app with PM2
         run: |
-          ssh "$VPS_USER@$VPS_HOST" bash -s << REMOTE
-            export NVM_DIR="\$HOME/.nvm"
-            [ -s "\$NVM_DIR/nvm.sh" ] && . "\$NVM_DIR/nvm.sh"
+          ssh "$VPS_USER@$VPS_HOST" "
+            export NVM_DIR=\$HOME/.nvm
+            [ -s \$NVM_DIR/nvm.sh ] && . \$NVM_DIR/nvm.sh
             nvm use default > /dev/null
 
-            APP_DIR="\$HOME/${APP_DIR}"
-            APP_NAME="${APP_NAME}"
-            APP_PORT="${APP_PORT}"
+            APP_DIR=\$HOME/${APP_DIR}
+            APP_NAME=${APP_NAME}
+            APP_PORT=${APP_PORT}
 
-            if pm2 describe "\$APP_NAME" > /dev/null 2>&1; then
-              pm2 restart "\$APP_NAME"
+            if pm2 describe \$APP_NAME > /dev/null 2>&1; then
+              pm2 restart \$APP_NAME
             else
-              pm2 serve "\$APP_DIR/dist" "\$APP_PORT" --name "\$APP_NAME" --spa
+              pm2 serve \$APP_DIR/dist \$APP_PORT --name \$APP_NAME --spa
             fi
 
             pm2 save
-          REMOTE
+          "
         env:
           VPS_HOST: ${{ vars.VPS_HOST || secrets.VPS_HOST }}
           VPS_USER: ${{ vars.VPS_USER || secrets.VPS_USER }}
