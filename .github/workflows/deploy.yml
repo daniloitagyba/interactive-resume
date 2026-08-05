@@ -73,7 +73,7 @@ jobs:
 
       - name: Restart app with PM2
         run: |
-          ssh "$VPS_USER@$VPS_HOST" << REMOTE
+          ssh "$VPS_USER@$VPS_HOST" bash -s << REMOTE
             export NVM_DIR="\$HOME/.nvm"
             [ -s "\$NVM_DIR/nvm.sh" ] && . "\$NVM_DIR/nvm.sh"
             nvm use default > /dev/null
