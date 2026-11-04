@@ -64,7 +64,7 @@ export const RESUME_DATA: ResumeData = {
         pt: "São Paulo, Brasil (remoto)",
       },
       startDate: new Date(2021, 9),
-      endDate: new Date(2024, 1),
+      endDate: new Date(2024, 3),
       description: {
         en: [
           "Developed services that process millions of sales records every day, perform automated reconciliations, and deliver accurate business information on time.",
